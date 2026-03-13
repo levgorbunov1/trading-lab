@@ -38,7 +38,23 @@ jobs:
         run: |
           python main.py
 
-      - name: Commit & Push changes
-        uses: actions-js/push@v1.5
+      - name: Check if state.json changed
+        id: statecheck
+        run: |
+          if git diff --quiet state.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git add state.json
+            git commit -m "Update trading state"
+          fi
+
+      - name: Create Pull Request
+        if: steps.statecheck.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update trading state"
+          title: "Update trading state"
+          body: "Automated state update from trading bot"
+          branch: "update-state-${{ github.run_id }}"
