@@ -96,7 +96,7 @@ def run():
     print("Change:", change)
 
     # Take profit
-    if change >= 0.02:
+    if change >= 0.05:
         print("Take profit triggered")
 
         sell(qty)
@@ -108,7 +108,7 @@ def run():
         save_state(state)
 
     # Stop loss
-    elif change <= -0.20:
+    elif change <= -0.10:
         print("Stop loss triggered")
 
         sell(qty)
