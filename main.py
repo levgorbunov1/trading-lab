@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from alpaca_trade_api import REST
 
 API_KEY = os.environ["API_KEY"]
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = os.environ["API_SECRET"]
 
 BASE_URL = "https://paper-api.alpaca.markets/v2"
 
