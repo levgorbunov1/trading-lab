@@ -36,7 +36,7 @@ jobs:
 
       - name: Run trading bot
         run: |
-          python bot.py
+          python main.py
 
       - name: Commit updated state
         run: |
