@@ -6,7 +6,7 @@ from alpaca_trade_api import REST
 API_KEY = os.environ["API_KEY"]
 SECRET_KEY = os.environ["API_SECRET"]
 
-BASE_URL = "https://paper-api.alpaca.markets/v2"
+BASE_URL = "https://paper-api.alpaca.markets"
 
 api = REST(API_KEY, SECRET_KEY, BASE_URL)
 
