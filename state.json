@@ -1,7 +1,7 @@
 {
   "symbol": "AAPL",
-  "initial_price": 251.47,
-  "position_qty": 1,
-  "last_trade": "buy",
-  "last_updated": "2026-03-13T09:00:00+00:00"
+  "initial_price": null,
+  "position_qty": 0,
+  "last_trade": "sell",
+  "last_updated": "2026-03-13T09:15:00+00:00"
 }
