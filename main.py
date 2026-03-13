@@ -96,7 +96,8 @@ def run():
     print("Change:", change)
 
     # Take profit
-    if change >= 0.00:
+    # if change >= 0.00:
+    if qty > 0:
         print("Take profit triggered")
 
         sell(qty)
