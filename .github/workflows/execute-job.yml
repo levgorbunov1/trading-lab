@@ -1,9 +1,9 @@
 name: Run Trading Bot
 
 on:
-  schedule:
-    # Runs once per day (15:00 GMT)
-    - cron: "0 15 * * *"
+  # schedule:
+  #   # Runs once per day (15:00 GMT)
+  #   - cron: "0 15 * * *"
   workflow_dispatch:
 
 permissions:
